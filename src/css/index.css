@@ -1,0 +1,22 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+p {
+    color:  black;
+    font-size: 18px;
+}
+#result #table_result, th, td {
+    border: 1px solid #000;
+    text-align: center;
+}
+#file_text {
+    font-size: 18px;
+}
+#table_result td {
+    width: 200px;
+}
