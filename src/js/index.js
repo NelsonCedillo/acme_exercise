@@ -24,7 +24,7 @@ fileSelector.addEventListener('change', (event) => {
         document_txt.open("GET",file_path,false);
         document_txt.send(null);
         text = document_txt.responseText; 
-        div_text.innerHTML = "No se cargo ningun archivo </br>"+text;
+        div_text.innerHTML = "No files were loaded. It is evaluated with test data. </br>"+text;
         console.log(text);
         findMatch(text);
     }
