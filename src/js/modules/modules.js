@@ -2,11 +2,11 @@
  * Function Text pre-work data
     The function extracts from the text the names of the employees
     and working hours and creates an object with these values.
-    @param {string} txt - hola mundo
+    @param {string} txt - Text with the dada input
     Return Data with keys(names, hours for employeer, length data)
     @return {any} - Data with keys(names, hours for employeer, length data)
 */
-function textArray(txt) {
+function textToObject(txt) {
   const arrayNames = [];
   const arrayHours = [];
   let dat = {};
@@ -295,7 +295,7 @@ function generateTable(mapTable) {
 
 // Export Functions
 export {
-  textArray,
+  textToObject,
   arrayMap,
   hourToMin,
   arrayMapPer,

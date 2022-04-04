@@ -1,5 +1,5 @@
 import {
-  textArray,
+  textToObject,
   arrayMapPer,
   generateTable,
   mapMatching,
@@ -22,7 +22,7 @@ function findMatch(dataText) {
   let x = 0;
 
   // Create a object with data names and hours worked
-  dataPrework = textArray(dataText);
+  dataPrework = textToObject(dataText);
 
   // Convert to map the data hours for person
 
@@ -57,9 +57,7 @@ fileSelector?.addEventListener('change', (event) => {
       console.log(text);
       const mapResult = findMatch(text);
       // Call the function for generate the table with the results
-      //if (mapResult.size>0) {
-        generateTable(mapResult);
-      //}
+      generateTable(mapResult);
     };
     reader.readAsText(fileList);
   } else {
@@ -71,9 +69,7 @@ fileSelector?.addEventListener('change', (event) => {
     console.log(text);
     const mapResult = findMatch(text);
     // Call the function for generate the table with the results
-    //if (mapResult.size>0) {
-      generateTable(mapResult);
-    //}
+    generateTable(mapResult);
   }
 });
 export {findMatch};
