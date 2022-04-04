@@ -38,7 +38,7 @@ The following programming languages were used to develop the application:
   To create the logic for obtain the matching 
   ### CSS
   To add Styles the HTML.
-  ### EST
+  ### JEST
   To Realized the Test units
   ### Babel
   To supported Javascript version
@@ -59,9 +59,15 @@ Finally for test the aplication your run the index.html
 ## Arquitecture
 
 The development was based on functional programming, for which Javascript was used as the programming language to obtain schedule matching by employee pairs. 
+
 In a first instance a ".txt" file is read which contains the data to be compared. If no file has been loaded, the code is executed with a ".txt" file to perform the tests.
+
 After this, the function findMatch(text) is called, which is the main function in which the whole comparison process takes place.
+
 Within this function a first data processing is performed through the function textToObject(text), this function receives the input text and creates an object with the names of the people, times and number of people to compare.
+
 A second treatment is performed on the data, but especially on the information containing the days and hours. For this, the function arrayMapPer(hoursPe) is used, as an argument the text with the days and hours worked per person is loaded, this function returns a map that contains as keys the days and hours as values. For this step the hours worked were converted only to minutes, because it facilitates the comparison of the frame times worked.
+
 Once all the data pre-processing is done, the function mapMatching(dataPrework) is called, which performs the comparison by day if there is any intersection of hours worked of pairs of employees, and returns a map only with the pairs of employee names where the coincidence of hours was found.
+
 Finally, to display the results in HTML in a table, the function generateTable(mapResult) is called, which as input data receives a map with the names of the pairs of employees and the matching schedules.  This function creates the table inside HTML with the matching results.
