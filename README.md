@@ -1,13 +1,13 @@
 # ACME Exercise
 
 ## Table of Contents
-  1. [General Info](#general_info)
+  1. [General_Info](#general_info)
   2. [Interfaces](#interfaces)
   3. [Technologies](#technologies)
   4. [Installation](#installation)
   5. [Arquitecture](#arquitecture)
  
-## General Info
+## General_Info
 The goal of this exercise is to output a table containing pairs of employees and how often they have coincided in the office.
 
   ### Example
