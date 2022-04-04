@@ -1,0 +1,28 @@
+{
+  "name": "acme_exercise",
+  "version": "1.0.0",
+  "description": "The goal of this exercise is to output a table containing pairs of employees and how often they have coincided in the office.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --env=jsdom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NelsonCedillo/acme_exercise.git"
+  },
+  "author": "NelsonCedillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NelsonCedillo/acme_exercise/issues"
+  },
+  "homepage": "https://github.com/NelsonCedillo/acme_exercise#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.12.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^27.5.1",
+    "prettier": "2.6.2"
+  }
+}
