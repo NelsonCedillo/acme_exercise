@@ -1,7 +1,7 @@
 # ACME Exercise
 
 ## Table of Contents
-  1. [General Info](#general info)
+  1. [General Info](#general_info)
   2. [Interfaces](#interfaces)
   3. [Technologies](#technologies)
   4. [Installation](#installation)
