@@ -5,7 +5,6 @@ import {
   mapMatching,
 } from './modules/modules.js';
 // Variables
-let text = '';
 const divText = document.getElementById('file_text');
 const divResult = document.getElementById('result');
 const documentTxt = new XMLHttpRequest();
@@ -41,23 +40,26 @@ function findMatch(dataText) {
     console.log(dataPrint[0] + ': ' + dataPrint[1]);
   });
 
-  // Call the function for generate the table with the results
-  generateTable(mapMatchingPairs);
-
-  return [...mapMatchingPairs.entries()];
+  return mapMatchingPairs;
 }
 
 const fileSelector = document.getElementById('input_file');
 fileSelector?.addEventListener('change', (event) => {
   const fileList = event.target?.files?.[0];
+  let text = '';
   divResult.innerHTML = '';
+
   if (fileList) {
     const reader = new FileReader();
     reader.onload = function(e) {
-      const contenido = e.target.result;
-      divText.innerHTML = contenido;
-      console.log(contenido);
-      findMatch(contenido);
+      text = e.target.result;
+      divText.innerHTML = text;
+      console.log(text);
+      const mapResult = findMatch(text);
+      // Call the function for generate the table with the results
+      //if (mapResult.size>0) {
+        generateTable(mapResult);
+      //}
     };
     reader.readAsText(fileList);
   } else {
@@ -67,7 +69,11 @@ fileSelector?.addEventListener('change', (event) => {
     divText.innerHTML =
             'No files were loaded. It is evaluated with test data.</br>' + text;
     console.log(text);
-    findMatch(text);
+    const mapResult = findMatch(text);
+    // Call the function for generate the table with the results
+    //if (mapResult.size>0) {
+      generateTable(mapResult);
+    //}
   }
 });
 export {findMatch};

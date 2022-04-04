@@ -219,7 +219,9 @@ function mapMatching(dataObj) {
           }
         }
       }
-      mapMatching.set(pairNames, matchForPair);
+      if (matchForPair>0) {
+        mapMatching.set(pairNames, matchForPair);
+      }
       matchForPair = 0;
       daysMatch.clear();
       j += 1;
@@ -239,6 +241,10 @@ function mapMatching(dataObj) {
 function generateTable(mapTable) {
   // Get the body element reference
   const divResult = document.getElementById('result');
+  if (mapTable.size==0) {
+    divResult.innerHTML = 'Not matching employees in the same time';
+    return;
+  }
   // Creates a <table> and <tbody> elements
   const table = document.createElement('table');
   const tblBody = document.createElement('tbody');
