@@ -1,7 +1,7 @@
 # acme_exercise
 
 ## Table of Contents
-  1. [General Info](#general-info)
+  1. [General_Info](#general_info)
   2. [Interfaces](#interfaces)
   3. [Technologies](#technologies)
   4. [Installation](#installation)
@@ -28,7 +28,7 @@ The application has an interface developed in HTML which allows to visualize the
 The input data can be uploaded to a button, which allows to attach an input file with the data. The allowed file type is '.txt'.
 The logic development was implemented in Javascript, two Javascript execution files were implemented. The 'index.js' file has the main functional logic for finding the match between employees, and the 'modules'js' file contains all the secondary functions implemented.
 
-## Tecnologies
+## Technologies
 
 The following programming languages were used to develop the application:
 
