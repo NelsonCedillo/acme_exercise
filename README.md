@@ -1,4 +1,4 @@
-# acme_exercise
+# ACME_Exercise
 
 ## Table of Contents
   1. [General_Info](#general_info)
