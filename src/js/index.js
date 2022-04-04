@@ -7,6 +7,7 @@ import {
 // Variables
 let text = '';
 const divText = document.getElementById('file_text');
+const divResult = document.getElementById('result');
 const documentTxt = new XMLHttpRequest();
 const FILE_PATH = '/src/index.txt';
 
@@ -15,6 +16,7 @@ const FILE_PATH = '/src/index.txt';
  * The function creates a map with the matching data by employee pairs.
  * and generate table in HTML with the result
  * @param {string} dataText - Text with the data
+ * @return {any} - array iterable with the maching for pairs employees
  */
 function findMatch(dataText) {
   let dataPrework = {};
@@ -41,12 +43,14 @@ function findMatch(dataText) {
 
   // Call the function for generate the table with the results
   generateTable(mapMatchingPairs);
+
+  return [...mapMatchingPairs.entries()];
 }
 
 const fileSelector = document.getElementById('input_file');
 fileSelector?.addEventListener('change', (event) => {
   const fileList = event.target?.files?.[0];
-
+  divResult.innerHTML = '';
   if (fileList) {
     const reader = new FileReader();
     reader.onload = function(e) {

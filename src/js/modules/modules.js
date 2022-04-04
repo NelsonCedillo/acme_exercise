@@ -239,7 +239,6 @@ function mapMatching(dataObj) {
 function generateTable(mapTable) {
   // Get the body element reference
   const divResult = document.getElementById('result');
-  divResult.innerHTML = '';
   // Creates a <table> and <tbody> elements
   const table = document.createElement('table');
   const tblBody = document.createElement('tbody');

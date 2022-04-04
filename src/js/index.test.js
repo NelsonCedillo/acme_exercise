@@ -1,13 +1,14 @@
 import {findMatch} from './index';
-/*
-describe("Test Sum",() =>{ 
-    describe("Test 2222",()=>{
-        test("Suma 1",()=>{
-            expect(sum(4,5)).toEqual(9);
-        })
-    })
-    test("Test 1",() => {
-        expect(sum(1,2)).toEqual(3);
-    })
-})
-*/
+
+describe('Test the function findMatch', () =>{
+  describe('Test for find ', ()=>{
+    test('Suma 1', ()=>{
+      expect(
+          findMatch('RENE=MO10:15-12:00,TU10:00-12:00\r\nASTRID=MO10:00-12:00'),
+      ).toEqual({'RENE-ASTRID': '1'});
+    });
+  });
+  /* test('Test 1', () => {
+    expect(sum(1, 2)).toEqual(3);
+  });*/
+});
