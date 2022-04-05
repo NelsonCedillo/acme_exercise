@@ -6,6 +6,7 @@
   3. [Technologies](#technologies)
   4. [Installation](#installation)
   5. [Arquitecture](#arquitecture)
+  6. [Example_Image](#example_image)
  
 ## General_Info
 The goal of this exercise is to output a table containing pairs of employees and how often they have coincided in the office.
@@ -51,8 +52,6 @@ $ git clone https://github.com/NelsonCedillo/acme_exercise.git
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
-$ npm install --save-dev jest
-$ npm install --save-dev @babel/preset-env
 ```
 Finally for test the aplication your run the index.html
 
@@ -71,3 +70,6 @@ A second treatment is performed on the data, but especially on the information c
 Once all the data pre-processing is done, the function mapMatching(dataPrework) is called, which performs the comparison by day if there is any intersection of hours worked of pairs of employees, and returns a map only with the pairs of employee names where the coincidence of hours was found.
 
 Finally, to display the results in HTML in a table, the function generateTable(mapResult) is called, which as input data receives a map with the names of the pairs of employees and the matching schedules.  This function creates the table inside HTML with the matching results.
+
+## Example_Image
+![Alt text](/src/img/testOne.jpg?raw=true "Example Test Aplication")
